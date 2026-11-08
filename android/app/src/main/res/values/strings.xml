@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tap-a-Latte</string>
+    <string name="title_activity_main">Tap-a-Latte</string>
+    <string name="package_name">ph.tapalatte.kiosk</string>
+    <string name="custom_url_scheme">ph.tapalatte.kiosk</string>
+</resources>
