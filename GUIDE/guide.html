@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tap-a-Latte Proposal Defense Guide</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #2E190E;
+      background-color: #FFFFFF;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #2E190E 0%, #4A2D1C 100%);
+      color: white;
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .header-banner h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #FAF7F2;
+      margin-bottom: 4px;
+    }
+    .header-banner p {
+      font-size: 11pt;
+      color: #D5B79F;
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      background: #C67C4E;
+      color: white;
+      border-radius: 999px;
+      font-size: 8.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+    }
+    h2 {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #2E190E;
+      border-bottom: 2px solid #E7D5C5;
+      padding-bottom: 4px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #C67C4E;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin-bottom: 8px;
+    }
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .card {
+      background: #FAF7F2;
+      border: 1px solid #E7D5C5;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-weight: bold;
+      color: #2E190E;
+      font-size: 11pt;
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px 0;
+      font-size: 10pt;
+    }
+    th, td {
+      border: 1px solid #E7D5C5;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #2E190E;
+      color: #FAF7F2;
+      font-weight: 600;
+      font-size: 9.5pt;
+      text-transform: uppercase;
+    }
+    tr:nth-child(even) {
+      background-color: #FAF7F2;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 8.5pt;
+      font-weight: bold;
+    }
+    .badge-admin { background: #FEF3C7; color: #92400E; }
+    .badge-cashier { background: #D1FAE5; color: #065F46; }
+    .badge-staff { background: #DBEAFE; color: #1E40AF; }
+    .badge-customer { background: #F3E8FF; color: #6B21A8; }
+    .callout {
+      background: #FFFBEB;
+      border-left: 4px solid #C67C4E;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .qna-box {
+      background: #FDFBF7;
+      border: 1px solid #D5B79F;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+    }
+    .qna-q {
+      font-weight: bold;
+      color: #C67C4E;
+      font-size: 10.5pt;
+      margin-bottom: 3px;
+    }
+    .qna-a {
+      font-size: 10pt;
+      color: #4A2D1C;
+    }
+    .page-break {
+      page-break-after: always;
+    }
+    .footer {
+      margin-top: 24px;
+      padding-top: 10px;
+      border-top: 1px solid #E7D5C5;
+      font-size: 8.5pt;
+      color: #8E5A3B;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER BANNER -->
+  <div class="header-banner">
+    <h1>☕ Tap-a-Latte</h1>
+    <p>Self-Ordering Kiosk & Cafe Management System for Coffee Shops in Kabacan, North Cotabato</p>
+    <span class="tag">Capstone Proposal Defense Cheat-Sheet & Guide</span>
+  </div>
+
+  <!-- SECTION 1: WHAT IS THIS AND PURPOSE -->
+  <h2>1. What is Tap-a-Latte? (Purpose & Objectives)</h2>
+  <div class="card">
+    <div class="card-title">📌 In Plain English for Your Group:</div>
+    <p><strong>Tap-a-Latte</strong> is a smart coffee ordering system designed specifically for small and medium coffee shops in <strong>Kabacan, North Cotabato</strong>. It replaces traditional paper order pads with a modern digital ordering kiosk that customers can tap on, while simultaneously giving baristas and shop owners real-time management tools.</p>
+  </div>
+
+  <h3>The Problems We Are Solving:</h3>
+  <ul>
+    <li><strong>Long Waiting Times:</strong> Customers waiting in long lines to order during rush hours (students, teachers, office workers).</li>
+    <li><strong>Order Mistakes:</strong> Cashiers mishearing drink specifications (wrong sugar level, wrong cup size, hot vs. iced mistakes).</li>
+    <li><strong>Payment Delays:</strong> Slow handling of cash and manual verification of GCash and PayMaya reference numbers.</li>
+    <li><strong>Inventory Shortages:</strong> Baristas suddenly discovering they have run out of coffee beans or milk in the middle of a rush.</li>
+  </ul>
+
+  <h3>Our Proposed Solution:</h3>
+  <ul>
+    <li>A <strong>Self-Service Kiosk</strong> where customers choose and customize their drinks exactly how they want them.</li>
+    <li>An <strong>Automated Kitchen Display System (KDS)</strong> where baristas see incoming drink recipes in real-time.</li>
+    <li>An <strong>Inventory Tracker</strong> that automatically deducts beans, milk, syrups, and cups with each order and triggers low-stock alerts.</li>
+  </ul>
+
+  <!-- SECTION 2: FRAMEWORKS & LANGUAGES -->
+  <h2>2. Technologies, Frameworks & Languages Used</h2>
+  <p>Here is the exact tech stack. When the panel asks <em>"What technologies did you use and why?"</em>, refer directly to this table:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Technology Used</th>
+        <th>Why We Used It (Simple Reason)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frontend Language</strong></td>
+        <td><strong>TypeScript / JavaScript</strong></td>
+        <td>Catches code bugs before runtime; ensures type safety for drink orders and currency calculations.</td>
+      </tr>
+      <tr>
+        <td><strong>UI Framework</strong></td>
+        <td><strong>React 18 + Vite</strong></td>
+        <td>Renders pages instantly in 600ms; reactive components for live cart updates and instant drink customizations.</td>
+      </tr>
+      <tr>
+        <td><strong>Styling / Design</strong></td>
+        <td><strong>Tailwind CSS</strong></td>
+        <td>Allowed us to craft a custom artisan coffee color palette (espresso darks, caramel ambers, latte cream).</td>
+      </tr>
+      <tr>
+        <td><strong>Mobile Engine (Android & iOS)</strong></td>
+        <td><strong>Capacitor 8</strong> (by Ionic)</td>
+        <td>Turns our responsive application into 100% native Android (APK) and Apple iOS (Xcode) apps without rewriting code twice.</td>
+      </tr>
+      <tr>
+        <td><strong>Cross-Platform Alternative</strong></td>
+        <td><strong>Flutter (Dart)</strong></td>
+        <td>Included in <code>flutter_app/</code> for cross-platform mobile native compiles.</td>
+      </tr>
+      <tr>
+        <td><strong>Database Architecture</strong></td>
+        <td><strong>Relational SQL (SQLite / MySQL)</strong></td>
+        <td>11 normalized tables with foreign keys and automatic inventory triggers; runs offline in the app and on server databases.</td>
+      </tr>
+      <tr>
+        <td><strong>Backend API Architecture</strong></td>
+        <td><strong>Laravel 11 (PHP 8.3)</strong></td>
+        <td>Includes full Eloquent Models and REST API routes in <code>laravel_backend/</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Cloud Deployment</strong></td>
+        <td><strong>Vercel + GitHub Actions</strong></td>
+        <td>Vercel hosts the web app 24/7 for free; GitHub Actions automatically builds the Android APK in the cloud.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 3: HOW THE APP WORKS -->
+  <h2>3. How the App Works (Step-by-Step Flow)</h2>
+  <p>Walk the panel through this simple 5-step scenario during your demo:</p>
+
+  <div class="card">
+    <div class="card-title">Step 1: Customer Browses & Customizes (Kiosk Ordering)</div>
+    <p>The customer walks up to the kiosk or opens the mobile app. They select a drink (e.g., <em>Kabacan Spanish Latte</em>) and customize it: <strong>Sugar level (50%)</strong>, <strong>Cup size (Large 16oz)</strong>, <strong>Milk type (Oat Milk)</strong>, and add-ons like <strong>Extra Espresso Shot</strong>. They choose <strong>Dine-In</strong> or <strong>Take-Out</strong>.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Step 2: Payment & Digital Ticket Generation</div>
+    <p>Customer proceeds to checkout. They select <strong>GCash</strong> (scans QR), <strong>PayMaya</strong> (scans QR), or <strong>Cash at Counter</strong>. Once confirmed, the system instantly prints/displays a <strong>Digital Queue Ticket with a live QR Code</strong> (e.g., <code>#LATT-101</code>).</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Step 3: Cashier Verifies (POS Terminal)</div>
+    <p>If the customer chose Cash, the order enters the Cashier's pending queue. The cashier inputs the cash tendered (e.g., ₱500 bill), the system automatically calculates the change, and marks the ticket as <strong>Paid</strong>.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Step 4: Barista Prepares (Kitchen Display System - KDS)</div>
+    <p>The order immediately appears on the Barista's kitchen screen with exact recipe specifications. The barista clicks <strong>"Start Brewing"</strong>, then <strong>"Mark as Ready for Pickup"</strong> when the coffee is poured.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Step 5: Automatic Inventory Deduction & Admin Tracking</div>
+    <p>The system automatically deducts the raw ingredients (18g coffee beans, 200ml milk, 1 cup). If beans or milk fall below safety thresholds, the Owner/Admin dashboard immediately triggers a <strong>Low Stock Alert</strong>.</p>
+  </div>
+
+  <!-- SECTION 4: USER ROLES -->
+  <h2>4. User Roles & Access Separation</h2>
+  <p>Access is divided into 4 distinct portals, protected by quick PIN authentication:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Role</th>
+        <th>Quick PIN</th>
+        <th>What They Can Access / See</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-customer">Customer</span></td>
+        <td>None (Open)</td>
+        <td>Menu browsing, Drink customizer, Dine-In/Take-Out, GCash/Maya/Cash checkout, Digital ticket.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-cashier">Cashier</span></td>
+        <td><code>2222</code></td>
+        <td>Pending cash queue, GCash/Maya reference verification, Cash tender & change calculator, Print receipt.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-staff">Staff / Barista</span></td>
+        <td><code>3333</code></td>
+        <td>Kitchen Display System (KDS Kanban), incoming drink recipes, one-click order status advancement.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-admin">Admin / Owner</span></td>
+        <td><code>1234</code></td>
+        <td>Executive Dashboard (Daily sales, total orders, AOV), User Management (CRUD accounts), Menu item CRUD & Availability toggle, Real-Time Ingredient Inventory.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 5: SPECIAL RESPONSIVE FEATURE -->
+  <h2>5. Unique Feature: Automatic Dual-Layout (No Button)</h2>
+  <div class="callout">
+    <strong>Key Point for Panel:</strong> Unlike basic websites that simply shrink, our system features <strong>two completely separate layouts</strong> that swap <strong>100% automatically</strong>:
+    <br><br>
+    • <strong>Dedicated Mobile Layout:</strong> Triggers automatically on phones (width &lt; 768px or vertical portrait orientation). Features thumb-friendly touch cards, bottom navigation, and slide-up sheets.
+    <br>
+    • <strong>Dedicated PC / Kiosk Split Layout:</strong> Triggers automatically on wide monitors or landscape kiosk tablets (&ge; 768px). Features a 3-column split view: Category sidebar on the left, touch product grid in the middle, and persistent live order tray on the right.
+    <br>
+    • <strong>No manual toggle button:</strong> It responds dynamically to screen resizing or device rotation without user intervention.
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 6: Q&A CHEAT SHEET -->
+  <h2>6. Anticipated Panel Questions & Ready Answers (Cheat Sheet)</h2>
+
+  <div class="qna-box">
+    <div class="qna-q">Q1: "Why did you use Capacitor instead of building separate native apps from scratch?"</div>
+    <div class="qna-a"><strong>Answer:</strong> "Capacitor allows us to maintain a single unified codebase with 100% synchronized business logic. This drastically lowers development and maintenance costs for small local coffee shops in Kabacan while still compiling into native Android APKs and iOS apps with full offline capabilities."</div>
+  </div>
+
+  <div class="qna-box">
+    <div class="qna-q">Q2: "What happens if the internet goes down in Kabacan?"</div>
+    <div class="qna-a"><strong>Answer:</strong> "The native Android APK runs 100% locally on the device hardware using local database persistence. It does not depend on cloud internet or a host PC to browse the menu, customize drinks, or issue cash order queue tickets."</div>
+  </div>
+
+  <div class="qna-box">
+    <div class="qna-q">Q3: "How does the inventory system prevent running out of stock?"</div>
+    <div class="qna-a"><strong>Answer:</strong> "Every menu item is mapped to recipe ingredient amounts (e.g. 0.02kg coffee beans, 0.2L milk). When an order is placed, stock is automatically subtracted. When any ingredient drops to or below its minimum threshold, the Admin Dashboard immediately raises a red Low-Stock Alert banner."</div>
+  </div>
+
+  <div class="qna-box">
+    <div class="qna-q">Q4: "How does the cashier verify cashless GCash or PayMaya payments?"</div>
+    <div class="qna-a"><strong>Answer:</strong> "The kiosk generates a dynamic QR code for GCash or PayMaya and asks the customer for the transaction reference number. The order enters the Cashier's POS screen with the reference number clearly highlighted for quick payment confirmation before moving to the barista."</div>
+  </div>
+
+  <div class="qna-box">
+    <div class="qna-q">Q5: "Why is there no button to switch to mobile view?"</div>
+    <div class="qna-a"><strong>Answer:</strong> "For a kiosk system, human customers should never have to manually adjust view settings. Our system utilizes a custom responsive hook that automatically detects viewport dimensions and device orientation, switching layouts seamlessly behind the scenes."</div>
+  </div>
+
+  <div class="footer">
+    <strong>Tap-a-Latte – Self Ordering Kiosk System</strong> • Kabacan, North Cotabato • Prepared for Proposal Defense
+  </div>
+
+</body>
+</html>
