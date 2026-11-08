@@ -2,24 +2,23 @@
 **Specialty Coffee Self-Service Kiosk & Cafe Management Platform**  
 *Tailored for Coffee Shops in Kabacan, North Cotabato*
 
----
-
-## 🌟 Overview & Purpose
-**Tap-a-Latte** is designed to solve long waiting times, order errors, and inefficient ordering processes in local coffee shops by providing a self-service ordering kiosk and management system. 
-
-It provides:
-- **Online & Local Web Access**: Accessible from any desktop or mobile browser.
-- **Native Mobile Support**: Configured with Capacitor (`capacitor.config.ts`, Android & iOS) and includes complete Flutter cross-platform architecture (`flutter_app/`).
-- **Automatic Responsive Dual Layout**: Automatically switches between a dedicated **Mobile View** and a dedicated **PC/Kiosk View** whenever the screen size or orientation changes. **No manual toggle button required!**
-- **Role-Based Access Control**: Strict page separation and quick PIN switching for **Customer**, **Cashier**, **Staff/Barista**, and **Admin/Owner**.
-- **Comprehensive Database**: Production-ready relational SQL schema (`database/schema.sql`) and Eloquent Laravel models (`laravel_backend/`).
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnoobmasterrr690-lang%2Ftap-a-latte)
+[![Download Android APK](https://img.shields.io/badge/Download-Android%20APK%20(v1.0.0)-2ea44f?logo=android&logoColor=white)](https://github.com/noobmasterrr690-lang/tap-a-latte/releases/download/v1.0.0/Tap-a-Latte-Kiosk.apk)
 
 ---
 
-## 🚀 Live Access
-The live development server is running and accessible immediately:
-- **Local Browser**: [http://localhost:5173/](http://localhost:5173/)
-- **Mobile Devices on Local Wi-Fi**: `http://172.20.10.3:5173/`
+## 📱 Mobile APK Download (Share with Friends)
+- **Direct APK Download**: [Download Tap-a-Latte-Kiosk.apk](https://github.com/noobmasterrr690-lang/tap-a-latte/releases/download/v1.0.0/Tap-a-Latte-Kiosk.apk)
+- **GitHub Release Page**: [https://github.com/noobmasterrr690-lang/tap-a-latte/releases/tag/v1.0.0](https://github.com/noobmasterrr690-lang/tap-a-latte/releases/tag/v1.0.0)
+
+---
+
+## 🚀 1-Click Vercel Deployment
+To deploy this project to Vercel with your own domain and online URL:
+1. Click the button above or visit:  
+   👉 [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnoobmasterrr690-lang%2Ftap-a-latte)
+2. Connect your GitHub account (`noobmasterrr690-lang`) and click **Deploy**.
+3. Vercel will build and assign you a free public link (e.g. `https://tap-a-latte.vercel.app`).
 
 ---
 
@@ -44,8 +43,6 @@ The application implements a dedicated dual layout architecture without any manu
 - **PC / Kiosk Split Layout (`DesktopLayout.tsx`)**:
   - Automatically triggered when screen width `>= 768px` in landscape mode.
   - Multi-column layout: Left category sidebar, central high-resolution touch menu grid, and right persistent live order tray.
-- **Pure Automatic Switch**:
-  - Managed by `src/context/useResponsive.ts` listening to `window.resize`, `orientationchange`, and `window.matchMedia`.
 
 ---
 
@@ -56,26 +53,3 @@ Click the Role Badge in the top right header to switch roles or authenticate:
 - 💳 **Cashier**: Counter POS, verify cash/GCash/Maya payments, print receipts. **PIN: `2222`**
 - ☕ **Staff / Barista**: Kitchen Display System (KDS), drink recipes, order status advance. **PIN: `3333`**
 - 👑 **Admin / Owner**: Executive dashboard, sales telemetry, user management, inventory restock. **PIN: `1234`**
-
----
-
-## 🗄️ Database Architecture
-The complete SQL schema is located in `database/schema.sql` and includes:
-- `users`: User profiles, roles, and terminal PINs.
-- `categories`: Menu categorization with icons and sort order.
-- `products`: Coffee items, descriptions, base prices, availability.
-- `product_sizes`: Volume and price deltas.
-- `addons`: Customizer extras (extra shots, syrups, toppings).
-- `ingredients`: Real-time stock levels, units, and minimum alert thresholds.
-- `product_recipes`: Ingredient mapping for automated deduction upon checkout.
-- `orders`: Queue ticket number, customer name, totals, payment status, order status.
-- `order_items`: Drink customizations (sugar, size, milk, add-ons).
-- `inventory_logs`: Audit trail for stock deductions and restocks.
-
----
-
-## 🛠️ Tech Stack & Folders
-- **Live Web / Mobile PWA**: React 18, TypeScript, Vite, Tailwind CSS, Lucide Icons.
-- **Mobile Native**: Capacitor (`capacitor.config.ts`, Android & iOS).
-- **Flutter Codebase**: `flutter_app/` (Clean architecture with Models, Views, ResponsiveLayout).
-- **Laravel Backend**: `laravel_backend/` (Eloquent Models, API routes, migrations).
