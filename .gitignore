@@ -32,5 +32,6 @@ lerna-debug.log*
 .DS_Store
 Thumbs.db
 
-# Vercel
-.vercel
+# Binaries
+*.apk
+*.ipa

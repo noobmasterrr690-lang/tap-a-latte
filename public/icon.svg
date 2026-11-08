@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#2E190E"/>
+  <circle cx="256" cy="256" r="180" fill="#3E2316" stroke="#C67C4E" stroke-width="12"/>
+  <!-- Coffee Cup Outline -->
+  <path d="M140 200h200v100c0 40-30 70-70 70h-60c-40 0-70-30-70-70V200z" fill="#C67C4E"/>
+  <!-- Coffee Foam Surface -->
+  <ellipse cx="240" cy="200" rx="100" ry="24" fill="#FDFBF7"/>
+  <ellipse cx="240" cy="200" rx="80" ry="16" fill="#D5B79F"/>
+  <ellipse cx="240" cy="200" rx="50" ry="10" fill="#8E5A3B"/>
+  <!-- Cup Handle -->
+  <path d="M340 220h24c25 0 44 20 44 44s-19 44-44 44h-24" fill="none" stroke="#C67C4E" stroke-width="20" stroke-linecap="round"/>
+  <!-- Steam Curves -->
+  <path d="M200 150c-10-20 10-30 0-50M240 140c-10-20 10-30 0-50M280 150c-10-20 10-30 0-50" fill="none" stroke="#FDFBF7" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+  <!-- Plate / Saucer -->
+  <path d="M120 400h240" stroke="#C67C4E" stroke-width="18" stroke-linecap="round"/>
+</svg>
