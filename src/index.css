@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #2E190E;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3ECE4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C09375;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A97451;
+}
+
+/* Coffee glow utilities */
+.coffee-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(198, 124, 78, 0.15);
+}
+
+.coffee-gradient {
+  background: linear-gradient(135deg, #2E190E 0%, #4A2D1C 50%, #6E432A 100%);
+}
+
+.caramel-gradient {
+  background: linear-gradient(135deg, #C67C4E 0%, #D98A5B 100%);
+}
+
+.gold-badge {
+  background: linear-gradient(135deg, #E6A77C 0%, #C67C4E 100%);
+  color: white;
+}
+
+/* Safe area for mobile notches and bottom bars */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 16px);
+}
+
+/* Receipt paper tear effect */
+.receipt-paper {
+  background: #FFFDF9;
+  box-shadow: 0 10px 30px rgba(74, 45, 28, 0.12);
+  position: relative;
+}
+
+.receipt-paper::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-image: radial-gradient(circle, transparent 4px, #FFFDF9 5px);
+  background-size: 14px 14px;
+}
